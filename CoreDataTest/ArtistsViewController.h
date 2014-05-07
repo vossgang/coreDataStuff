@@ -1,5 +1,5 @@
 //
-//  MVViewController.h
+//  ArtistsViewController.h
 //  CoreDataTest
 //
 //  Created by Matthew Voss on 5/7/14.
@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Label.h"
 #import "Song.h"
 #import "Album.h"
-#import "Label.h"
 #import "Artist.h"
 
 
-@interface MVViewController : UIViewController
+@interface ArtistsViewController : UIViewController
+
+@property (nonatomic, weak) Label *selectedLabel;
 
 @end

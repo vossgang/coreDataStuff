@@ -1,5 +1,5 @@
 //
-//  MVViewController.h
+//  AlbumViewController.h
 //  CoreDataTest
 //
 //  Created by Matthew Voss on 5/7/14.
@@ -12,7 +12,8 @@
 #import "Label.h"
 #import "Artist.h"
 
+@interface AlbumViewController : UIViewController
 
-@interface MVViewController : UIViewController
+@property (nonatomic, weak) Artist *selectedArtist;
 
 @end

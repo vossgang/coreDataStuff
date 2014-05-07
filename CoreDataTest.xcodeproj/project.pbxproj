@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C920D952191AC84000B8A8E0 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D951191AC84000B8A8E0 /* Song.m */; };
+		C920D955191AC84000B8A8E0 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D954191AC84000B8A8E0 /* Artist.m */; };
+		C920D958191AC84000B8A8E0 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D957191AC84000B8A8E0 /* Label.m */; };
+		C920D95B191AC84000B8A8E0 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D95A191AC84000B8A8E0 /* Album.m */; };
+		C920D95E191AC9D900B8A8E0 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D95D191AC9D900B8A8E0 /* AlbumViewController.m */; };
+		C920D961191ACC3E00B8A8E0 /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D960191ACC3E00B8A8E0 /* SongViewController.m */; };
 		C9CD5194191A960200C41AC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD5193191A960200C41AC5 /* Foundation.framework */; };
 		C9CD5196191A960200C41AC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD5195191A960200C41AC5 /* CoreGraphics.framework */; };
 		C9CD5198191A960200C41AC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD5197191A960200C41AC5 /* UIKit.framework */; };
@@ -21,6 +27,9 @@
 		C9CD51B5191A960200C41AC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD5197191A960200C41AC5 /* UIKit.framework */; };
 		C9CD51BD191A960200C41AC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9CD51BB191A960200C41AC5 /* InfoPlist.strings */; };
 		C9CD51BF191A960200C41AC5 /* CoreDataTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CD51BE191A960200C41AC5 /* CoreDataTestTests.m */; };
+		C9CD51CA191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CD51C9191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.m */; };
+		C9CD51CD191A9B8B00C41AC5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9CD51CB191A9B8B00C41AC5 /* Model.xcdatamodeld */; };
+		C9CD51D6191AADB600C41AC5 /* ArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CD51D5191AADB600C41AC5 /* ArtistsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C920D950191AC84000B8A8E0 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		C920D951191AC84000B8A8E0 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		C920D953191AC84000B8A8E0 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		C920D954191AC84000B8A8E0 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		C920D956191AC84000B8A8E0 /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		C920D957191AC84000B8A8E0 /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
+		C920D959191AC84000B8A8E0 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		C920D95A191AC84000B8A8E0 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		C920D95C191AC9D900B8A8E0 /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		C920D95D191AC9D900B8A8E0 /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		C920D95F191ACC3E00B8A8E0 /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
+		C920D960191ACC3E00B8A8E0 /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
 		C9CD5190191A960200C41AC5 /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CD5193191A960200C41AC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CD5195191A960200C41AC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +74,11 @@
 		C9CD51BA191A960200C41AC5 /* CoreDataTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataTestTests-Info.plist"; sourceTree = "<group>"; };
 		C9CD51BC191A960200C41AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9CD51BE191A960200C41AC5 /* CoreDataTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestTests.m; sourceTree = "<group>"; };
+		C9CD51C8191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MVAppDelegate+CoreDataContext.h"; path = "../MVAppDelegate+CoreDataContext.h"; sourceTree = "<group>"; };
+		C9CD51C9191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MVAppDelegate+CoreDataContext.m"; path = "../MVAppDelegate+CoreDataContext.m"; sourceTree = "<group>"; };
+		C9CD51CC191A9B8B00C41AC5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C9CD51D4191AADB600C41AC5 /* ArtistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistsViewController.h; sourceTree = "<group>"; };
+		C9CD51D5191AADB600C41AC5 /* ArtistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +138,20 @@
 		C9CD5199191A960200C41AC5 /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
+				C9CD51C8191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.h */,
+				C9CD51C9191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.m */,
+				C9CD51CB191A9B8B00C41AC5 /* Model.xcdatamodeld */,
 				C9CD51A2191A960200C41AC5 /* MVAppDelegate.h */,
 				C9CD51A3191A960200C41AC5 /* MVAppDelegate.m */,
 				C9CD51A5191A960200C41AC5 /* Main.storyboard */,
+				C920D95F191ACC3E00B8A8E0 /* SongViewController.h */,
+				C920D960191ACC3E00B8A8E0 /* SongViewController.m */,
+				C920D95C191AC9D900B8A8E0 /* AlbumViewController.h */,
+				C920D95D191AC9D900B8A8E0 /* AlbumViewController.m */,
 				C9CD51A8191A960200C41AC5 /* MVViewController.h */,
 				C9CD51A9191A960200C41AC5 /* MVViewController.m */,
+				C9CD51D4191AADB600C41AC5 /* ArtistsViewController.h */,
+				C9CD51D5191AADB600C41AC5 /* ArtistsViewController.m */,
 				C9CD51AB191A960200C41AC5 /* Images.xcassets */,
 				C9CD519A191A960200C41AC5 /* Supporting Files */,
 			);
@@ -130,6 +165,14 @@
 				C9CD519C191A960200C41AC5 /* InfoPlist.strings */,
 				C9CD519F191A960200C41AC5 /* main.m */,
 				C9CD51A1191A960200C41AC5 /* CoreDataTest-Prefix.pch */,
+				C920D953191AC84000B8A8E0 /* Artist.h */,
+				C920D954191AC84000B8A8E0 /* Artist.m */,
+				C920D956191AC84000B8A8E0 /* Label.h */,
+				C920D957191AC84000B8A8E0 /* Label.m */,
+				C920D959191AC84000B8A8E0 /* Album.h */,
+				C920D95A191AC84000B8A8E0 /* Album.m */,
+				C920D950191AC84000B8A8E0 /* Song.h */,
+				C920D951191AC84000B8A8E0 /* Song.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,8 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C920D958191AC84000B8A8E0 /* Label.m in Sources */,
+				C9CD51CA191A962D00C41AC5 /* MVAppDelegate+CoreDataContext.m in Sources */,
 				C9CD51A0191A960200C41AC5 /* main.m in Sources */,
+				C920D95B191AC84000B8A8E0 /* Album.m in Sources */,
+				C9CD51CD191A9B8B00C41AC5 /* Model.xcdatamodeld in Sources */,
+				C9CD51D6191AADB600C41AC5 /* ArtistsViewController.m in Sources */,
 				C9CD51AA191A960200C41AC5 /* MVViewController.m in Sources */,
+				C920D952191AC84000B8A8E0 /* Song.m in Sources */,
+				C920D955191AC84000B8A8E0 /* Artist.m in Sources */,
+				C920D961191ACC3E00B8A8E0 /* SongViewController.m in Sources */,
+				C920D95E191AC9D900B8A8E0 /* AlbumViewController.m in Sources */,
 				C9CD51A4191A960200C41AC5 /* MVAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +509,7 @@
 				C9CD51C4191A960200C41AC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9CD51C5191A960200C41AC5 /* Build configuration list for PBXNativeTarget "CoreDataTestTests" */ = {
 			isa = XCConfigurationList;
@@ -465,8 +518,22 @@
 				C9CD51C7191A960200C41AC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9CD51CB191A9B8B00C41AC5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9CD51CC191A9B8B00C41AC5 /* Model.xcdatamodel */,
+			);
+			currentVersion = C9CD51CC191A9B8B00C41AC5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9CD5188191A960200C41AC5 /* Project object */;
 }
