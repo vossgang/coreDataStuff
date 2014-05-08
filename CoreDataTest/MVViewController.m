@@ -13,7 +13,7 @@
 #import "SearchView.h"
 #import "StyleKit.h"
 
-@interface MVViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface MVViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, weak) NSManagedObjectContext *objectContext;
 @property (nonatomic, strong) NSArray *labels;
@@ -22,6 +22,8 @@
 //search functionality
 @property (nonatomic, strong) SearchView *searchView;
 @property (nonatomic, strong) UITextField *searchField;
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @property (nonatomic, strong) UIView *backgroundGradient;
 
@@ -121,29 +123,51 @@
 - (IBAction)fetchResults:(id)sender
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Label"];
-//    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"name = %@",  @"Lolipopcorn"];
+    
+    NSSortDescriptor *sortdesc = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    
+    [fetchRequest setSortDescriptors:@[sortdesc]];
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.objectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    self.fetchedResultsController.delegate = self;
+    
     NSError *error;
-    self.labels = [self.objectContext executeFetchRequest:fetchRequest error:&error];
+    
+    [self.fetchedResultsController performFetch:&error];
+    
+//    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"name = %@",  @"Lolipopcorn"];
+//    NSError *error;
+//    self.labels = [self.objectContext executeFetchRequest:fetchRequest error:&error];
     NSLog(@"number of labels: %ld", (unsigned long)self.labels.count);
     [self.tableView reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.labels.count;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    return [sectionInfo numberOfObjects];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[self.fetchedResultsController sections] count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"labelCell"];
     
-    cell.backgroundColor = [UIColor clearColor];
-    Label *label = self.labels[indexPath.row];
-    cell.textLabel.text = label.name;
+//    cell.backgroundColor = [UIColor clearColor];
+//    Label *label = self.labels[indexPath.row];
+//    cell.textLabel.text = label.name;
+    
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
     
 }
+
 //dismiss keyboard when anything is touched
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UIControl *control in self.view.subviews) {
@@ -152,6 +176,7 @@
         }
     }
 }
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"goToArtist"]) {
@@ -161,5 +186,81 @@
     }
 }
 
+- (IBAction)addLabel:(id)sender
+{
+    Label *label = [NSEntityDescription insertNewObjectForEntityForName:@"Label" inManagedObjectContext:self.objectContext];
+    label.name = @"Awesome";
+}
+
+/*
+ Assume self has a property 'tableView' -- as is the case for an instance of a UITableViewController
+ subclass -- and a method configureCell:atIndexPath: which updates the contents of a given cell
+ with information from a managed object at the given index path in the fetched results controller.
+ */
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                          withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                          withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath
+{
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath]
+                    atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView endUpdates];
+}
+
+-(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = [object valueForKey:@"name"];
+}
 
 @end
