@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BABFB29191B179700A1BA72 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BABFB28191B179700A1BA72 /* SearchView.m */; };
+		1BABFB36191B2D7F00A1BA72 /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BABFB35191B2D7F00A1BA72 /* StyleKit.m */; };
 		C920D952191AC84000B8A8E0 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D951191AC84000B8A8E0 /* Song.m */; };
 		C920D955191AC84000B8A8E0 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D954191AC84000B8A8E0 /* Artist.m */; };
 		C920D958191AC84000B8A8E0 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = C920D957191AC84000B8A8E0 /* Label.m */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BABFB27191B179700A1BA72 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		1BABFB28191B179700A1BA72 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		1BABFB34191B2D7F00A1BA72 /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
+		1BABFB35191B2D7F00A1BA72 /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
 		C920D950191AC84000B8A8E0 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		C920D951191AC84000B8A8E0 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		C920D953191AC84000B8A8E0 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
@@ -105,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BABFB2A191B179C00A1BA72 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1BABFB27191B179700A1BA72 /* SearchView.h */,
+				1BABFB28191B179700A1BA72 /* SearchView.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		C9CD5187191A960200C41AC5 = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +163,11 @@
 				C920D960191ACC3E00B8A8E0 /* SongViewController.m */,
 				C920D95C191AC9D900B8A8E0 /* AlbumViewController.h */,
 				C920D95D191AC9D900B8A8E0 /* AlbumViewController.m */,
-				C9CD51A8191A960200C41AC5 /* MVViewController.h */,
-				C9CD51A9191A960200C41AC5 /* MVViewController.m */,
 				C9CD51D4191AADB600C41AC5 /* ArtistsViewController.h */,
 				C9CD51D5191AADB600C41AC5 /* ArtistsViewController.m */,
+				C9CD51A8191A960200C41AC5 /* MVViewController.h */,
+				C9CD51A9191A960200C41AC5 /* MVViewController.m */,
+				1BABFB2A191B179C00A1BA72 /* Search */,
 				C9CD51AB191A960200C41AC5 /* Images.xcassets */,
 				C9CD519A191A960200C41AC5 /* Supporting Files */,
 			);
@@ -161,6 +177,8 @@
 		C9CD519A191A960200C41AC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BABFB34191B2D7F00A1BA72 /* StyleKit.h */,
+				1BABFB35191B2D7F00A1BA72 /* StyleKit.m */,
 				C9CD519B191A960200C41AC5 /* CoreDataTest-Info.plist */,
 				C9CD519C191A960200C41AC5 /* InfoPlist.strings */,
 				C9CD519F191A960200C41AC5 /* main.m */,
@@ -304,7 +322,9 @@
 				C920D955191AC84000B8A8E0 /* Artist.m in Sources */,
 				C920D961191ACC3E00B8A8E0 /* SongViewController.m in Sources */,
 				C920D95E191AC9D900B8A8E0 /* AlbumViewController.m in Sources */,
+				1BABFB36191B2D7F00A1BA72 /* StyleKit.m in Sources */,
 				C9CD51A4191A960200C41AC5 /* MVAppDelegate.m in Sources */,
+				1BABFB29191B179700A1BA72 /* SearchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

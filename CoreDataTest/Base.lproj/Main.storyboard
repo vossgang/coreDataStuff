@@ -37,15 +37,15 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SPS-AA-hGX">
-                                <rect key="frame" x="-6" y="74" width="326" height="436"/>
+                                <rect key="frame" x="17" y="165" width="287" height="352"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="labelCell" id="nrJ-S0-mdl">
-                                        <rect key="frame" x="0.0" y="22" width="326" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="287" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nrJ-S0-mdl" id="qp6-Cw-mqe">
-                                            <rect key="frame" x="0.0" y="0.0" width="293" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
